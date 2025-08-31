@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #ffffff; /* white */
+    --color-foreground: #0b0b0b; /* sophisticated black */
+    --color-border: #e5e7eb; /* gray-200 */
+    --color-input: #ffffff; /* white */
+    --color-ring: #d4af37; /* gold */
+
+    /* Card Colors */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #0b0b0b; /* sophisticated black */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #0b0b0b; /* sophisticated black */
+
+    /* Muted Colors */
+    --color-muted: #f8f9fa; /* gray-50 */
+    --color-muted-foreground: #6c757d; /* gray-500 */
+
+    /* Primary Colors */
+    --color-primary: #0b0b0b; /* sophisticated black */
+    --color-primary-foreground: #ffffff; /* white */
+
+    /* Secondary Colors */
+    --color-secondary: #f8f9fa; /* gray-50 */
+    --color-secondary-foreground: #0b0b0b; /* sophisticated black */
+
+    /* Accent Colors */
+    --color-accent: #d4af37; /* gold */
+    --color-accent-foreground: #0b0b0b; /* sophisticated black */
+
+    /* Status Colors */
+    --color-success: #28a745; /* green-600 */
+    --color-success-foreground: #ffffff; /* white */
+    --color-warning: #ffc107; /* amber-400 */
+    --color-warning-foreground: #0b0b0b; /* sophisticated black */
+    --color-error: #dc3545; /* red-600 */
+    --color-error-foreground: #ffffff; /* white */
+    --color-destructive: #dc3545; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .luxury-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-luxury {
+    transition: all 200ms ease-in-out;
+  }
+}
